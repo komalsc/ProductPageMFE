@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 import SingleProductCard from "./components/views/SingleProductCard/SingleProductCard";
@@ -9,39 +9,39 @@ import Header from 'HomePageMFE/Header'
 
 
 
- import Footer from 'HomePageMFE/Footer'
- 
+import Footer from 'HomePageMFE/Footer'
+
 
 import "./index.scss";
 
 const App = () => {
 
-  const[matches, setMatches]=useState(
+  const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches
   )
-  useEffect(()=>{
-    window.matchMedia("(min-width:768)").addEventListener('change',e=> setMatches(e.matches))
-  },[])
-return(
-   <>  
-   
-   <Header/>
+  useEffect(() => {
+    window.matchMedia("(min-width:768)").addEventListener('change', e => setMatches(e.matches))
+  }, [])
+  return (
+    <>
 
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-  
+      <Header />
 
-      {matches && <SingleProductCard/>}
-      {!matches && <SingleProductCard/>}
+      <div className="mt-10 text-3xl mx-auto max-w-6xl">
 
-      
-      
-      
-  </div>
-  <div>
-  <Footer/>
-  </div>
 
-  </>
-);
+        {matches && <SingleProductCard />}
+        {!matches && <SingleProductCard />}
+
+
+
+
+      </div>
+      <div>
+        <Footer />
+      </div>
+
+    </>
+  );
 }
 ReactDOM.render(<App />, document.getElementById("app"));

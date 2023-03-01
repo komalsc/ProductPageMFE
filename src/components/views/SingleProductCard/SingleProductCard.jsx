@@ -7,7 +7,7 @@ import Button from "../Button/Button";
 import Card from "../Card/Card";
 
 import Text from 'LoginPageMFE/Text'
-import products from "../../../utils/products";
+import products from "LoginPageMFE/products";
 
 
 
@@ -20,53 +20,50 @@ import products from "../../../utils/products";
  */
 
 export const SingleProductCard = (props) => {
- 
 
-function handleClick(){
-  alert('added')
-}
-
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  const id = params.id;
+  function handleClick() {
+    alert('added')
+  }
+  const product = products[products.findIndex(current => current.id == id)]
   return (
     <>
 
-<h1 className={classes.heading}>TOP HEALTHY FRUITS</h1>
-     
+      <h1 className={classes.heading}>TOP HEALTHY FRUITS</h1>
 
-<div className={classes.container}>
-      {products.map((product)=>{
-       const {id, productName, productImg, description, price}=product
-       return (
+
+      <div className={classes.container}>
         <div className={classes.container} key={id}>
-    <div className={classes.item1}>
-      <span className={classes.categories}>
-        {description}
-      </span>
-      <h2 className={classes.title}>{productName}</h2>
-      <img src={productImg} className={classes.Img}/>
-      <RatingStars rating={4}/>
+          <div className={classes.item1}>
+            <span className={classes.categories}>
+              {product.description}
+            </span>
+            <h2 className={classes.title}>{product.productName}</h2>
+            <img src={product.productImg} className={classes.Img} />
+            <RatingStars rating={4} />
 
-      <h5 className={classes.price}>Price: ${price}</h5>
-      <Button className={classes.btn} onClick={handleClick}/>
-    </div>
+            <h5 className={classes.price}>Price: ${product.price}</h5>
+            <Button className={classes.btn} onClick={handleClick} />
+          </div>
         </div>
-       )
-      }
-      )}
-         
 
 
-</div>
-<div>
+
+      </div>
+      <div>
 
 
-</div>
+      </div>
 
 
 
 
       {/* <ProductCard /> */}
     </>
-);
+  );
 }
 
 /**
