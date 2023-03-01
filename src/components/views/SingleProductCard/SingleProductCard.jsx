@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import classes from "./SingleProductCard.module.css";
 import RatingStars from "../RatingStars/RatingStars";
 import Button from "../Button/Button";
-import Card from "../Card/Card";
 
 import Text from 'LoginPageMFE/Text'
 import products from "LoginPageMFE/products";

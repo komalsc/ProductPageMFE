@@ -16,7 +16,7 @@ import classes from './Text.module.scss';
 export const Text = (props) => {
     return (
         <div className={classes.container}>
-            {props.example}
+            {/* {props.example} */}
         </div>
     )
 }

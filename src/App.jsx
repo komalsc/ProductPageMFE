@@ -9,8 +9,10 @@ import Header from 'HomePageMFE/Header'
 
 
 
-import Footer from 'HomePageMFE/Footer'
 
+
+ import Footer from 'HomePageMFE/Footer'
+ 
 
 import "./index.scss";
 
