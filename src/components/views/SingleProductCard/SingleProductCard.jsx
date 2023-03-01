@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import classes from "./SingleProductCard.module.css";
 import RatingStars from "../RatingStars/RatingStars";
 import Button from "../Button/Button";
-import Card from "../Card/Card";
 
 import Text from 'LoginPageMFE/Text'
 import products from "../../../utils/products";
@@ -22,14 +21,15 @@ import products from "../../../utils/products";
 export const SingleProductCard = (props) => {
  
 
-function handleClick(){
-  alert('added')
-}
+// function handleClick(){
+//   alert('added')
+// }
 
   return (
     <>
 
 <h1 className={classes.heading}>TOP HEALTHY FRUITS</h1>
+
      
 
 <div className={classes.container}>
@@ -46,7 +46,7 @@ function handleClick(){
       <RatingStars rating={4}/>
 
       <h5 className={classes.price}>Price: ${price}</h5>
-      <Button className={classes.btn} onClick={handleClick}/>
+      <Button className={classes.btn} />
     </div>
         </div>
        )

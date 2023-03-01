@@ -14,11 +14,11 @@ import classes from './Button.module.scss';
  */
 
 export const Button = (props) => {
-    const {onClick,className}=props
+    const {className}=props
     return (
         <div className={classes.container}>
          
-            <button onClick={onClick} className={className}>Add to Cart</button>
+            <button className={className}>Add to Cart</button>
           
         </div>
     )

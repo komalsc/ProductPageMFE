@@ -9,6 +9,8 @@ import Header from 'HomePageMFE/Header'
 
 
 
+
+
  import Footer from 'HomePageMFE/Footer'
  
 
@@ -17,25 +19,27 @@ import "./index.scss";
 const App = () => {
 
   const[matches, setMatches]=useState(
-    window.matchMedia("(min-width: 768px)").matches
+  window.matchMedia("(min-width: 768px)").matches
   )
   useEffect(()=>{
     window.matchMedia("(min-width:768)").addEventListener('change',e=> setMatches(e.matches))
+    
   },[])
 return(
    <>  
    
    <Header/>
+   
+   
 
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
+  <div>
   
 
       {matches && <SingleProductCard/>}
       {!matches && <SingleProductCard/>}
-
       
       
-      
+   
   </div>
   <div>
   <Footer/>
