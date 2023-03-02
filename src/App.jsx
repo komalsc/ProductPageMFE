@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
 import SingleProductCard from "./components/views/SingleProductCard/SingleProductCard";
-import Header from 'HomePageMFE/Header'
+// import Header from 'HomePageMFE/Header'
 
 
 
@@ -11,7 +11,7 @@ import Header from 'HomePageMFE/Header'
 
 
 
- import Footer from 'HomePageMFE/Footer'
+//  import Footer from 'HomePageMFE/Footer'
  
 
 import "./index.scss";
@@ -27,20 +27,20 @@ const App = () => {
   return (
     <>
 
-      <Header />
+      {/* <Header /> */}
 
-      <div className="mt-10 text-3xl mx-auto max-w-6xl">
+      <div>
 
 
         {matches && <SingleProductCard />}
         {!matches && <SingleProductCard />}
 
-
+       
 
 
       </div>
       <div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
 
     </>
